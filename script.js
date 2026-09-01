@@ -141,11 +141,54 @@ function excluirAluno(index) {
 
     function buscarAluno() {
     const buscar = document.querySelector("#buscar").value;
-     
-    const alunosEncontrados = alunos.filter((aluno)=> {
-    
-   });
-    console.log(buscar);
 
+    if (buscar === "") {
+        alert("Informe o nome do aluno para buscar.");
+        return;
+    }
+
+    if (alunos.length === 0) {
+        alert("Não há alunos cadastrados.");
+        return;
+    }
+     
+
+    const alunosEncontrados = alunos.filter((aluno)=> {
+    return aluno.nome.toLowerCase().includes(buscar.toLowerCase());
+   });
+    
+    const resultado = document.querySelector("#resultado");
+
+    if (alunosEncontrados.length === 0) {
+        resultado.innerHTML = "<p>Nenhum aluno encontrado.</p>";
+        return;
+    }
+
+    resultado.innerHTML = "";
+
+    alunosEncontrados.forEach((aluno, index) => {
+
+        resultado.innerHTML += `
+            <div>
+                <p>Nome: ${aluno.nome}</p>
+                <p>Idade: ${aluno.idade}</p>
+                <p>Plano: ${aluno.plano}</p>
+                <p>Status: ${aluno.status}</p>
+            </div>
+          `; 
+         
+    });   
+
+}
+
+    function mostrarTodos() {
+      const resultado = document.querySelector("#resultado");
+      const buscarinput = document.querySelector("#buscar");
+       
+      resultado.innerHTML = "";
+
+        mostrarAlunos();
+        buscarinput.value = "";
+    
 }
 
