@@ -54,17 +54,25 @@
      <button onclick="cadastrarAluno()">Cadastrar Aluno</button>
     
     </section>
+
+    <section class="card card-lista"> 
+     <h2>Alunos cadastrados</h2>
+    
+     <div class="campo">
+       <label for="buscar">Aluno</label>
+       <input type="text" id="buscar">
+     </div>
+
+     <div class="acoes-busca">
+       <button onclick="buscarAluno()">Buscar</button>
+       <button onclick="mostrarTodos()">Mostrar Todos</button>
+     </div> 
+
+     <div id="resultado"></div>
+
+    </section>
    </main>
 
-  <label for="buscar">Aluno</label>
-  <input type="text" id="buscar">
-
-  <button onclick="cadastrarAluno()">Cadastrar Aluno</button>
-  <button onclick="buscarAluno()">Buscar</button>
-  <button onclick="mostrarTodos()">Mostrar Todos</button>
-
-
-<div id="resultado"></div>
   <script src="script.js"></script>
 
  </body>
