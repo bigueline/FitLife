@@ -32,3 +32,31 @@ header p {
   font-size: 16px;
   color: #64748B;
 }
+
+.container {
+  display: flex;
+  gap: 24px;
+  padding: 0 48px;
+}
+
+.card {
+  background-color: #FFFFFF;
+   padding: 24px;
+   border: 1px solid #E2E8F0;
+     border-radius: 12px;
+}
+
+.card-formulario {
+  flex: 1;
+}
+
+.card-lista {
+  flex: 2;
+}  
+
+.card h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1E293B;
+  margin-bottom: 24px;
+}
