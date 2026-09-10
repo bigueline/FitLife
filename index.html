@@ -30,25 +30,31 @@
        <input type="number" id="idade">
       </div>
 
+      <div class="campo">
+        <label for="plano">Plano</label>
+
+       <select id="plano">
+         <option value="">Selecione um plano</option>
+         <option value="Mensal">Mensal</option>
+         <option value="Trimestral">Trimestral</option>
+         <option value="Anual">Anual</option>
+       </select>
+     </div>
+
+     <div class="campo">
+       <label for="status">Status</label>
+
+       <select id="status">
+         <option value=""> Selecione um status </option>
+         <option value="Ativo"> Ativo </option>
+         <option value="Inativo"> Inativo </option>
+        </select>
+     </div>
+
+     <button onclick="cadastrarAluno()">Cadastrar Aluno</button>
+    
     </section>
    </main>
-
- <label for="plano">Plano</label>
-
-   <select id="plano">
-    <option value=""> Selecione um plano </option>
-    <option value="Mensal"> Mensal  </option>
-    <option value="Trimestral"> Trimestral </option>
-    <option value="Anual"> Anual </option>
-   </select>
-  
- <label for="status">Status</label>
-
-  <select id="status">
-    <option value=""> Selecione um status </option>
-    <option value="Ativo"> Ativo </option>
-    <option value="Inativo"> Inativo </option>
-  </select>
 
   <label for="buscar">Aluno</label>
   <input type="text" id="buscar">
