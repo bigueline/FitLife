@@ -80,5 +80,29 @@ header p {
   width: 100%;
   padding: 0 16px;
   border: 1px solid #CBD5E1;
+  border-radius: 8px; 
+  color: #1E293B;
+  background-color: #FFFFFF;
+}
+
+.campo input::placeholder {
+  color: #94A3B8;
+ 
+}
+
+.botao-cadastrar {
+  height: 48px;
+  width: 100%;
+  background-color: #2563EB;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
   border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botao-cadastrar:hover {
+  background-color: #1D4ED8;
 }
