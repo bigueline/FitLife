@@ -60,3 +60,25 @@ header p {
   color: #1E293B;
   margin-bottom: 24px;
 }
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  font-size: 14px;
+  font-weight: 500;
+  color:#334155 ;
+}
+
+.campo input,
+.campo select {
+  height: 48px;
+  width: 100%;
+  padding: 0 16px;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+}
