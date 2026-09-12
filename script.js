@@ -97,14 +97,16 @@ function mostrarAlunos() {
     alunos.forEach((aluno, index) => {
         console.log(aluno.nome, index);
         resultado.innerHTML += `
-            <div>
-                <p>Nome: ${aluno.nome}</p>
-                <p>Idade: ${aluno.idade}</p>
-                <p>Plano: ${aluno.plano}</p>
-                <p>Status: ${aluno.status}</p>
+            <div class="aluno-item">
+             <p class="aluno-nome">${aluno.nome}</p>
+             <p class="aluno-idade">${aluno.idade}</p>
+             <p class="aluno-plano"> ${aluno.plano}</p>
+             <p class="aluno-status"> ${aluno.status}</p>
 
-                <button onclick="editarAluno(${index})">Editar</button>
-                <button onclick="excluirAluno(${index})">Excluir</button>
+              <div class="aluno-botoes">
+                 <button onclick="editarAluno(${index})">Editar</button>
+                 <button onclick="excluirAluno(${index})">Excluir</button>
+              </div>
             </div>
         `;
     });
@@ -123,6 +125,7 @@ function excluirAluno(index) {
     resultado.innerHTML = "";
 
     mostrarAlunos()
+
 }
 
     function editarAluno(index) {
@@ -189,6 +192,8 @@ function excluirAluno(index) {
 
         mostrarAlunos();
         buscarinput.value = "";
-    
+
 }
+
+
 

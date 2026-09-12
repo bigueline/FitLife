@@ -147,3 +147,19 @@ header p {
 .botao-mostrar-todos:hover {
   background-color: #E0E7FF;
 }
+
+.lista-cabecalho {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.aluno-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+}
