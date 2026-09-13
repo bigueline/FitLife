@@ -104,8 +104,8 @@ function mostrarAlunos() {
              <p class="aluno-status"> ${aluno.status}</p>
 
               <div class="aluno-botoes">
-                 <button onclick="editarAluno(${index})">Editar</button>
-                 <button onclick="excluirAluno(${index})">Excluir</button>
+                 <button class="button-editar" onclick="editarAluno(${index})">Editar</button>
+                 <button class="button-excluir" onclick="excluirAluno(${index})">Excluir</button>
               </div>
             </div>
         `;

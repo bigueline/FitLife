@@ -158,8 +158,78 @@ header p {
 
 .aluno-item {
   display: flex;
+  align-items: center;
   gap: 16px;
   padding: 16px;
   background-color: #FFFFFF;
   border-bottom: 1px solid #E2E8F0;
+}
+
+.aluno-nome {
+  width: 180px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1E293B;
+}
+
+.aluno-idade {
+  width: 70px;
+  font-size: 16px;
+  color: #1E293B;
+}
+
+.aluno-plano {
+  width: 100px;
+  font-size: 16px;
+  color: #1E293B;
+}
+
+.aluno-status {
+  width: 100px;
+  font-size: 16px;
+  color: #1E293B;
+}
+
+.aluno-botoes {
+  width: 160px;
+  display: flex;
+  gap: 8px;
+}
+
+.aluno-acoes { 
+  width: 160px;
+}
+
+.button-editar {
+  background-color: #FFFFFF;
+  color: #334155;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-editar:hover {
+  background-color: #F1F5F9;
+}
+
+.button-excluir {
+  background-color: #FFFFFF;
+  color: #DC2626;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #FCA5A5;
+  border-radius: 8px;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-excluir:hover {
+  background-color: #FEF2F2;
 }
