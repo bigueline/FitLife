@@ -98,23 +98,33 @@ function mostrarAlunos() {
         console.log(aluno.nome, index);
         const classeStatus = aluno.status === "Ativo"
     ? "status-ativo"
-    : "status-inativo";
+    : "status-inativo"; 
+
         resultado.innerHTML += `
             <div class="aluno-item">
-             <p class="aluno-nome">${aluno.nome}</p>
-             <p class="aluno-idade">${aluno.idade}</p>
-             <p class="aluno-plano"> ${aluno.plano}</p>
 
-                <div class="aluno-status">
-                 <span class="${classeStatus}">${aluno.status}</span>
-                </div>
+                 <div class="aluno-topo">
+                     <p class="aluno-nome">${aluno.nome}</p>
 
-               <div class="aluno-botoes">
-                 <button class="button-editar" onclick="editarAluno(${index})">Editar</button>
-                 <button class="button-excluir" onclick="excluirAluno(${index})">Excluir</button>
-               </div>
+                       <div class="aluno-status">
+                         <span class="${classeStatus}">${aluno.status}</span>
+                       </div> 
 
+                    </div>
+                     <p class="aluno-idade">${aluno.idade}</p>
+                     <p class="aluno-plano">${aluno.plano}</p>
+                  
+                     <p class="aluno-info">${aluno.idade} anos • ${aluno.plano}</p>
+
+                   <div class="aluno-botoes">
+                     <button class="button-editar" onclick="editarAluno(${index})">Editar</button>
+                     <button class="button-excluir" onclick="excluirAluno(${index})">Excluir</button>
+                  </div>
+
+                
             </div>
+
+       
         `;
     });
 }

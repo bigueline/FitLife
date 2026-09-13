@@ -259,3 +259,31 @@ header p {
   border-radius: 999px;
   font-size: 14px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .lista-cabecalho {
+  display: none;
+}
+
+.aluno-item {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+}
+
+.aluno-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+}
