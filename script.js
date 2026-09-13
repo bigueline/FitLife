@@ -68,15 +68,12 @@
         plano: plano,
         status: status,
      };
- 
-     console.log("Índice sendo editado:", indiceEditando);
    
      if (indiceEditando === null) {
-     console.log("Índice antes de salvar:", indiceEditando);
-     alunos.push(aluno);
+      alunos.push(aluno);
      } else {
-     alunos[indiceEditando] = aluno;
-     indiceEditando = null;
+      alunos[indiceEditando] = aluno;
+      indiceEditando = null;
      }
 
 
@@ -103,8 +100,6 @@ mostrarAlunos();
 
 function excluirAluno(index) {
     alunos.splice(index, 1);
-
-    console.log("array depois da exclusão:", alunos);
     
     localStorage.setItem("alunos", JSON.stringify(alunos));
 
@@ -116,7 +111,6 @@ function excluirAluno(index) {
 }
 
     function editarAluno(index) {
-    console.log("Editar aluno:", index);
 
     indiceEditando = index;
 
