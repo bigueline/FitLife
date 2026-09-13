@@ -68,6 +68,14 @@ Durante o desenvolvimento pratiquei:
 
 Desenvolvido por Gabriel Bigueline.
 
+## 📄 Documentação do projeto
+
+Durante o desenvolvimento do FitLife, foi elaborado um relatório registrando
+as etapas do projeto, decisões tomadas, funcionalidades implementadas,
+testes realizados, problemas encontrados e aprendizados ao longo do processo.
+
+📘 [Acessar relatório completo do FitLife](./docs/Relatorio_Final_FitLife.pdf)
+
 ## 🔜 Próximos passos
 
 O FitLife continuará evoluindo.
