@@ -104,12 +104,16 @@ function mostrarAlunos() {
              <p class="aluno-nome">${aluno.nome}</p>
              <p class="aluno-idade">${aluno.idade}</p>
              <p class="aluno-plano"> ${aluno.plano}</p>
-             <p class="aluno-status"> ${aluno.status}</p>
 
-              <div class="aluno-botoes">
+                <div class="aluno-status">
+                 <span class="${classeStatus}">${aluno.status}</span>
+                </div>
+
+               <div class="aluno-botoes">
                  <button class="button-editar" onclick="editarAluno(${index})">Editar</button>
                  <button class="button-excluir" onclick="excluirAluno(${index})">Excluir</button>
-              </div>
+               </div>
+
             </div>
         `;
     });
