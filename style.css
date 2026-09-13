@@ -336,4 +336,8 @@ header p {
   width: auto;
   flex-shrink: 0;
  }
+
+ header {
+  padding: 32px 16px 24px;
+}
 }

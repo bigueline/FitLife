@@ -94,39 +94,9 @@
 function mostrarAlunos() {
     const resultado = document.querySelector("#resultado");
 
-    alunos.forEach((aluno, index) => {
-        console.log(aluno.nome, index);
-        const classeStatus = aluno.status === "Ativo"
-    ? "status-ativo"
-    : "status-inativo"; 
+    resultado.innerHTML = "";
 
-        resultado.innerHTML += `
-            <div class="aluno-item">
-
-                 <div class="aluno-topo">
-                     <p class="aluno-nome">${aluno.nome}</p>
-
-                       <div class="aluno-status">
-                         <span class="${classeStatus}">${aluno.status}</span>
-                       </div> 
-
-                    </div>
-                     <p class="aluno-idade">${aluno.idade}</p>
-                     <p class="aluno-plano">${aluno.plano}</p>
-                  
-                     <p class="aluno-info">${aluno.idade} anos • ${aluno.plano}</p>
-
-                   <div class="aluno-botoes">
-                     <button class="button-editar" onclick="editarAluno(${index})">Editar</button>
-                     <button class="button-excluir" onclick="excluirAluno(${index})">Excluir</button>
-                  </div>
-
-                
-            </div>
-
-       
-        `;
-    });
+    renderizarAlunos(alunos);
 }
 
 mostrarAlunos();
@@ -185,19 +155,7 @@ function excluirAluno(index) {
     }
 
     resultado.innerHTML = "";
-
-    alunosEncontrados.forEach((aluno, index) => {
-
-        resultado.innerHTML += `
-            <div>
-                <p>Nome: ${aluno.nome}</p>
-                <p>Idade: ${aluno.idade}</p>
-                <p>Plano: ${aluno.plano}</p>
-                <p>Status: ${aluno.status}</p>
-            </div>
-          `; 
-         
-    });   
+    renderizarAlunos(alunosEncontrados);
 
 }
 
@@ -212,5 +170,44 @@ function excluirAluno(index) {
 
 }
 
+function renderizarAlunos(lista) {
+    const resultado = document.querySelector("#resultado");
+    
+    lista.forEach((aluno, index) => {
+        const indiceOriginal = alunos.indexOf(aluno);
+
+        const classeStatus = aluno.status === "Ativo"
+    ? "status-ativo"
+    : "status-inativo"; 
+
+        resultado.innerHTML += `
+            <div class="aluno-item">
+
+                 <div class="aluno-topo">
+                     <p class="aluno-nome">${aluno.nome}</p>
+
+                       <div class="aluno-status">
+                         <span class="${classeStatus}">${aluno.status}</span>
+                       </div> 
+
+                    </div>
+                     <p class="aluno-idade">${aluno.idade}</p>
+                     <p class="aluno-plano">${aluno.plano}</p>
+                  
+                     <p class="aluno-info">${aluno.idade} anos • ${aluno.plano}</p>
+
+                   <div class="aluno-botoes">
+                     <button class="button-editar" onclick="editarAluno(${indiceOriginal})">Editar</button>
+                     <button class="button-excluir" onclick="excluirAluno(${indiceOriginal})">Excluir</button>
+                  </div>
+
+                
+            </div>
+
+       
+        `;
+    
+    });
+}   
 
 
