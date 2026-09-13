@@ -96,6 +96,9 @@ function mostrarAlunos() {
 
     alunos.forEach((aluno, index) => {
         console.log(aluno.nome, index);
+        const classeStatus = aluno.status === "Ativo"
+    ? "status-ativo"
+    : "status-inativo";
         resultado.innerHTML += `
             <div class="aluno-item">
              <p class="aluno-nome">${aluno.nome}</p>
