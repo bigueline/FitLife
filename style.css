@@ -260,6 +260,18 @@ header p {
   font-size: 14px;
 }
 
+.aluno-topo {
+  display: contents;
+}
+
+.aluno-item .aluno-status {
+  order: 1;
+}
+
+.aluno-item .aluno-botoes {
+  order: 2;
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -278,12 +290,50 @@ header p {
   margin-bottom: 12px;
   border: 1px solid #E2E8F0;
   border-radius: 12px;
-}
+ }
 
-.aluno-topo {
+ .aluno-topo {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
   width: 100%;
+ }
+ }
+
+ .aluno-info {
+  display: none;
+
 }
+
+@media (max-width: 768px) {
+  .aluno-idade,
+  .aluno-plano {
+    display: none;
+  }
+
+  .aluno-info {
+    display: block;
+    font-size: 14px;
+    color: #64748B;
+  }
+
+  .aluno-botoes {
+  width: 100%;
+ }
+
+ .aluno-botoes button {
+  flex: 1;
+ }
+
+  .aluno-nome {
+  width: auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+ }
+
+ .aluno-status {
+  width: auto;
+  flex-shrink: 0;
+ }
 }
